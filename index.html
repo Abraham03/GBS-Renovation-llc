@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBS Renovations LLC - Transforming Spaces</title> 
+    <meta name="description" content="Experts in renovations that combine design, quality, and functionality to bring your dream space to life.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Tinos:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- ===== Header / Navigation ===== -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <svg class="logo__icon" viewBox="0 0 66 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M65.0198 22.1831L44.435 0.820312H21.5847L0.999995 22.1831V60.8203H21.5847V40.2356H44.435V60.8203H65.0198V22.1831ZM21.5847 22.1831L33.0124 10.7554L44.435 22.1831H21.5847Z" fill="currentColor"/>
+                </svg>
+                <div class="logo__text">
+                    <span class="logo__brand">GBS</span>
+                    <span class="logo__tagline">RENOVATIONS LLC</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="#services" class="nav__link">Services</a>
+                <a href="#projects" class="nav__link">Projects</a>
+                <a href="#reviews" class="nav__link">Reviews</a>
+                <a href="#contact" class="nav__link">Contact</a>
+            </nav>
+            <div class="header__actions">
+                <a href="#contact" class="btn btn--primary">Free Quote</a>
+            </div>
+            <button id="mobile-menu-button" class="mobile-menu-button">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="mobile-nav">
+            <a href="#services" class="mobile-nav__link">Services</a>
+            <a href="#projects" class="mobile-nav__link">Projects</a>
+            <a href="#reviews" class="mobile-nav__link">Reviews</a>
+            <a href="#contact" class="mobile-nav__link">Contact</a>
+        </div>
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main>
+        <!-- ===== Hero Section ===== -->
+        <section class="hero">
+            <div class="hero__overlay"></div>
+            <img src="images/Deck-Siding-Windows/covered-composite-deck-A/covered-composite-deck-A-27-final-exterior-view.jpg" 
+                 onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/222/FFD245?text=Image+Error';"
+                 alt="Expansive covered deck renovation" class="hero__bg-image">
+            <div class="container hero__content" data-aos="fade-in" data-aos-delay="300">
+                <h1 class="hero__title">Transforming Spaces, <span class="text-brand-yellow">Creating Homes</span>.</h1>
+                <p class="hero__subtitle">Experts in renovations that combine design, quality, and functionality to bring your dream space to life.</p>
+                <a href="#projects" class="btn btn--primary btn--lg">View Projects</a>
+            </div>
+        </section>
+
+        <!-- ===== Services Section ===== -->
+        <section id="services" class="section">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <h2 class="section__title">Our Services</h2>
+                    <p class="section__subtitle">We offer comprehensive solutions for every corner of your home or business.</p>
+                </div>
+                <div class="grid services-grid">
+                    <div class="card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card__icon-wrapper"><i data-lucide="home" class="card__icon"></i></div>
+                        <h3 class="card__title">Kitchen & Bathroom</h3>
+                        <p class="card__text">Complete renovations for kitchens and bathrooms, including custom cabinets and modern fixtures.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card__icon-wrapper"><i data-lucide="square-kanban" class="card__icon"></i></div>
+                        <h3 class="card__title">Deck, Siding & Windows</h3>
+                        <p class="card__text">Expert deck renovation, siding installation, and window replacement to enhance your home's exterior.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card__icon-wrapper"><i data-lucide="hammer" class="card__icon"></i></div>
+                        <h3 class="card__title">Repairs & Installation</h3>
+                        <p class="card__text">Foundation and drywall repairs, professional door installation, and general demolition services.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card__icon-wrapper"><i data-lucide="paint-roller" class="card__icon"></i></div>
+                        <h3 class="card__title">Painting & Finishing</h3>
+                        <p class="card__text">High-quality interior and exterior painting services, plus pressure washing for a clean finish.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== Projects Section (Gallery) ===== -->
+        <section id="projects" class="section bg-pattern">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <h2 class="section__title">Recent Projects</h2>
+                    <p class="section__subtitle">Our work speaks for itself. Get inspired by our transformations.</p>
+                </div>
+                <div id="projects-gallery" class="projects-gallery">
+                    <p id="gallery-loader">Loading projects...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Reviews Section ===== -->
+        <section id="reviews" class="section">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <h2 class="section__title">The Trust of Our Clients</h2>
+                    <p class="section__subtitle">We are proud of the satisfaction of those who have trusted us.</p>
+                </div>
+                <div id="reviews-container" class="grid reviews-grid">
+                    <p id="reviews-loader">Loading reviews...</p>
+                </div>
+                <div class="text-center mt-12" data-aos="fade-up">
+                    <a href="https://www.google.com/search?q=gbs+renovations+llc" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+                        <span>See more on Google</span>
+                        <img src="https://www.google.com/favicon.ico" alt="Google icon" class="w-4 h-4 ml-2">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Contact Section ===== -->
+        <section id="contact" class="section bg-pattern">
+            <div class="container" data-aos="fade-up">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h2 class="section__title text-left">Start Your Project Today</h2>
+                        <p class="section__subtitle text-left">Contact us for a free consultation and quote. We are here to help you visualize the possibilities.</p>
+                        <div class="space-y-4 mt-8">
+                            <a href="tel:+18645931407" class="contact-info__link"><i data-lucide="phone"></i><span>(864) 593-1407</span></a>
+                            <a href="mailto:gbsrenovationllc@gmail.com" class="contact-info__link"><i data-lucide="mail"></i><span>gbsrenovationllc@gmail.com</span></a>
+                            <div class="contact-info__link"><i data-lucide="map-pin"></i><span>Serving Greenville SC, Anderson, Easley, Greer & Spartanburg</span></div>
+                        </div>
+                    </div>
+                    <form id="contact-form" class="contact-form">
+                        <div class="grid contact-form-grid">
+                            <input type="text" id="name" name="name" placeholder="Your Name" class="form__input" required>
+                            <input type="email" id="email" name="email" placeholder="Your Email Address" class="form__input" required>
+                        </div>
+                        <textarea id="message" name="message" placeholder="Tell us about your project..." rows="5" class="form__input mb-4" required></textarea>
+                        <button type="submit" class="btn btn--primary w-full">Send Message</button>
+                        <p id="form-status" class="form__status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; <span id="year"></span> GBS Renovations LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ===== Project Details Modal ===== -->
+    <div id="project-modal" class="modal">
+        <div class="modal__content">
+            <button id="modal-close-btn" class="modal__close-btn"><i data-lucide="x"></i></button>
+            <div id="modal-body" class="modal__body">
+                <!-- Project details will be injected here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
