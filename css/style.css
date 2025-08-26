@@ -27,7 +27,7 @@ body {
   background-color: var(--color-dark);
   color: var(--color-light);
   line-height: 1.6;
-  overflow-x: hidden; /* <-- SOLUCIÓN: Previene el scroll horizontal causado por animaciones */
+  overflow-x: hidden;
 }
 body.modal-open { overflow: hidden; }
 
@@ -82,7 +82,7 @@ body.modal-open { overflow: hidden; }
 .logo__icon { width: 2.5rem; height: 2.5rem; color: var(--color-primary); }
 .logo__text { display: flex; flex-direction: column; }
 .logo__brand { font-family: var(--font-logo); color: var(--color-light); font-size: 1.75rem; font-weight: 700; letter-spacing: 0.05em; line-height: 1; }
-.logo__tagline { color: var(--color-gray-medium); font-size: 0.65rem; letter-spacing: 0.15em; margin-top: -2px; }
+.logo__tagline { color: var(--color-gray-medium); font-size: 0.65rem; font-weight: 400; letter-spacing: 0.15em; margin-top: -2px; }
 
 .nav { display: none; }
 .header__actions { display: none; }
@@ -104,7 +104,7 @@ body.modal-open { overflow: hidden; }
 .nav__link:hover { color: var(--color-primary); }
 
 .hero { position: relative; height: calc(100vh - var(--header-height)); min-height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; }
-.hero__overlay { position: absolute; inset: 0; background: linear-gradient(to top, var(--color-dark) 0%, rgba(18, 18, 18, 0.6) 50%, transparent 100%); z-index: 1; }
+.hero__overlay { position: absolute; inset: 0; background: linear-gradient(to top, var(--color-dark) 0%, rgba(18, 18, 18, 0.6) 100%, transparent 100%); z-index: 1; }
 .hero__bg-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero__content { position: relative; z-index: 2; }
 .hero__title { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 1rem; }
@@ -146,110 +146,42 @@ body.modal-open { overflow: hidden; }
 
 .footer { background-color: var(--color-gray-darker); border-top: 1px solid var(--color-gray-dark); padding: 2rem 0; color: var(--color-gray-medium); }
 
-/* ==========================================================================
-   6. Estilos del Modal de Proyectos
-   ========================================================================== */
-.modal {
+.modal { position: fixed; inset: 0; background-color: rgba(0, 0, 0, 0.8); z-index: 100; display: flex; align-items: center; justify-content: center; padding: 1rem; opacity: 0; visibility: hidden; transition: opacity var(--transition-speed) ease, visibility var(--transition-speed) ease; }
+.modal.is-visible { opacity: 1; visibility: visible; }
+.modal__content { background-color: var(--color-gray-darker); border-radius: var(--border-radius); padding: 2rem; width: 100%; max-width: 900px; max-height: 90vh; overflow-y: auto; position: relative; transform: scale(0.95); transition: transform var(--transition-speed) ease; }
+.modal.is-visible .modal__content { transform: scale(1); }
+.modal__close-btn { position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: var(--color-gray-medium); cursor: pointer; padding: 0.5rem; }
+.modal__close-btn:hover { color: var(--color-light); }
+.modal__body { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+@media (min-width: 768px) { .modal__body { grid-template-columns: 2fr 1fr; } }
+.modal-carousel { position: relative; overflow: hidden; border-radius: var(--border-radius); }
+.modal-carousel__track { display: flex; transition: transform var(--transition-speed) ease-in-out; }
+.modal-carousel__slide { flex: 0 0 100%; width: 100%; aspect-ratio: 16 / 9; }
+.modal-carousel__slide img, .modal-carousel__slide video { width: 100%; height: 100%; object-fit: cover; border: none; }
+.modal-carousel__btn { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0,0,0,0.5); border: none; color: white; padding: 0.5rem; border-radius: 50%; cursor: pointer; z-index: 10; }
+.modal-carousel__btn--prev { left: 1rem; }
+.modal-carousel__btn--next { right: 1rem; }
+.modal-details__title { font-size: 1.75rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem; }
+.modal-details__category { font-weight: 700; color: var(--color-gray-medium); margin-bottom: 1rem; }
+.modal-details__description { color: var(--color-gray-medium); line-height: 1.7; }
+
+.whatsapp-fab {
   position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 100;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity var(--transition-speed) ease, visibility var(--transition-speed) ease;
-}
-.modal.is-visible {
-  opacity: 1;
-  visibility: visible;
-}
-.modal__content {
-  background-color: var(--color-gray-darker);
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  width: 100%;
-  max-width: 900px;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-  transform: scale(0.95);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 40;
   transition: transform var(--transition-speed) ease;
 }
-.modal.is-visible .modal__content {
-  transform: scale(1);
-}
-.modal__close-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  color: var(--color-gray-medium);
-  cursor: pointer;
-  padding: 0.5rem;
-}
-.modal__close-btn:hover {
-  color: var(--color-light);
-}
-.modal__body {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-@media (min-width: 768px) {
-  .modal__body {
-    grid-template-columns: 2fr 1fr;
-  }
-}
-.modal-carousel {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--border-radius);
-}
-.modal-carousel__track {
-  display: flex;
-  transition: transform var(--transition-speed) ease-in-out;
-}
-.modal-carousel__slide {
-  flex: 0 0 100%;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-}
-.modal-carousel__slide img, .modal-carousel__slide video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: none;
-}
-.modal-carousel__btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
-  border: none;
-  color: white;
-  padding: 0.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-}
-.modal-carousel__btn--prev { left: 1rem; }
-.modal-carousel__btn--next { right: 1rem; }
-.modal-details__title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 0.5rem;
-}
-.modal-details__category {
-  font-weight: 700;
-  color: var(--color-gray-medium);
-  margin-bottom: 1rem;
-}
-.modal-details__description {
-  color: var(--color-gray-medium);
-  line-height: 1.7;
+.whatsapp-fab:hover {
+  transform: scale(1.1);
+  background-color: #128C7E;
 }

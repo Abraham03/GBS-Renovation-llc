@@ -99,6 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
             thumbnailUrl: 'images/Kitchen-and-Bathroom/bathroom-remodel-B/bathroom-remodel-B-01-double-vanity.jpg',
             description: "This project showcases two distinct bathroom updates. One features a sleek grey vanity with a warm butcher block top, while the other includes a spacious double vanity with a butcher block counter and modern lighting fixtures.",
             media: [
+                { type: 'video', url: 'videos/Repairs-and-Installation/bathroom-demolition-before.mp4' },
+                { type: 'video', url: 'videos/Kitchen-and-Bathroom/shower-tiling-after.mp4' },
                 { type: 'image', url: 'images/Kitchen-and-Bathroom/bathroom-remodel-B/bathroom-remodel-B-02-single-vanity.jpg' },
                 { type: 'image', url: 'images/Kitchen-and-Bathroom/bathroom-remodel-B/bathroom-remodel-B-01-double-vanity.jpg' }
             ]
@@ -233,9 +235,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================================================
-    // 6. OTHER LOGIC (Reviews, Contact Form, etc.)
+    // 6. OTHER LOGIC (Reviews, etc.)
     // ==========================================================================
-    // Placeholder for reviews
     const loadReviews = () => {
         const reviewsContainer = document.getElementById('reviews-container');
         const reviewsLoader = document.getElementById('reviews-loader');
@@ -243,20 +244,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // You can add real reviews here later
     };
     
-    const contactForm = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
-    if (contactForm) {
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            formStatus.textContent = 'Sending...';
-            // Simulate form submission
-            setTimeout(() => {
-                formStatus.textContent = 'Message sent successfully!';
-                formStatus.style.color = 'lightgreen';
-                contactForm.reset();
-            }, 1000);
-        });
-    }
+    // NOTE: The contact form logic has been removed from JS.
+    // It is now handled directly by the form's `action` attribute in the HTML,
+    // which will open the user's default email client.
 
     // ==========================================================================
     // 7. INITIALIZATION
