@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { type: 'image', url: 'images/Kitchen-and-Bathroom/bathroom-remodel-B/bathroom-remodel-B-01-double-vanity.jpg' }
             ]
         },
-         { 
+        { 
             id: 6,
             title: "Multi-Level Wood Deck", 
             category: "Deck, Siding & Windows", 
@@ -117,6 +117,127 @@ document.addEventListener('DOMContentLoaded', () => {
                 { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-C/wood-deck-C-06-new-stairs.jpg' },
                 { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-C/wood-deck-C-08-decking-installed.jpg' },
                 { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-C/wood-deck-C-10-finished-high-view.jpg' }
+            ]
+        },
+        {
+            id: 7,
+            title: 'Covered Porch',
+            category: 'Deck, Siding & Windows',
+            thumbnailUrl: 'images/Deck-Siding-Windows/covered-porch-F/covered-porch-F-07-stained-exterior.jpg',
+            description: 'A beautifully stained covered porch, creating a perfect outdoor relaxation area.',
+            media: [
+                { type: 'image', url: 'images/Deck-Siding-Windows/covered-porch-F/covered-porch-F-01-finished-side.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/covered-porch-F/covered-porch-F-02-finished-front.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/covered-porch-F/covered-porch-F-03-finished-angle.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/covered-porch-F/covered-porch-F-04-finished-wide.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/covered-porch-F/covered-porch-F-05-stained-finish.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/covered-porch-F/covered-porch-F-06-stained-interior.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/covered-porch-F/covered-porch-F-07-stained-exterior.jpg' }
+            ]
+        },
+        {
+            id: 8,
+            title: 'New Porch Construction',
+            category: 'Deck, Siding & Windows',
+            thumbnailUrl: 'images/Deck-Siding-Windows/covered-porch-H/covered-porch-H-08-finished-structure.jpg',
+            description: 'Construction of a sturdy and spacious covered porch, from framing to finished structure.',
+            media: [
+                { type: 'image', url: 'images/Deck-Siding-Windows/covered-porch-H/covered-porch-H-01-framing-start.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/covered-porch-H/covered-porch-H-02-framing-progress.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/covered-porch-H/covered-porch-H-03-framing-angle.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/covered-porch-H/covered-porch-H-04-roof-framing.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/covered-porch-H/covered-porch-H-05-soffit-install.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/covered-porch-H/covered-porch-H-06-roof-detail.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/covered-porch-H/covered-porch-H-07-roof-complete.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/covered-porch-H/covered-porch-H-08-finished-structure.jpg' }
+            ]
+        },
+        {
+            id: 9,
+            title: 'Front Porch Renovation',
+            category: 'Deck, Siding & Windows',
+            thumbnailUrl: 'images/Deck-Siding-Windows/front-porch-G/front-porch-G-01-finished-front.jpg',
+            description: 'A complete front porch renovation, enhancing the home\'s curb appeal with new stairs and decking.',
+            media: [
+                { type: 'image', url: 'images/Deck-Siding-Windows/front-porch-G/front-porch-G-01-finished-front.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/front-porch-G/front-porch-G-02-finished-stairs.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/front-porch-G/front-porch-G-03-finished-deck.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/front-porch-G/front-porch-G-04-side-walkway.jpg' }
+            ]
+        },
+        {
+            id: 10,
+            title: 'Lattice Privacy Screen Deck',
+            category: 'Deck, Siding & Windows',
+            thumbnailUrl: 'images/Deck-Siding-Windows/wood-deck-D/wood-deck-D-06-finished-view.jpg',
+            description: 'A classic wood deck build, featuring a lattice privacy screen for a cozy, secluded feel.',
+            media: [
+                { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-D/wood-deck-D-01-framing-start.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-D/wood-deck-D-02-framing-complete.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-D/wood-deck-D-03-decking-complete.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-D/wood-deck-D-04-lattice-detail.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-D/wood-deck-D-05-lattice-privacy-screen.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-D/wood-deck-D-06-finished-view.jpg' }
+            ]
+        },
+        {
+            id: 11,
+            title: 'Deck and Post Repair',
+            category: 'Deck, Siding & Windows',
+            thumbnailUrl: 'images/Deck-Siding-Windows/wood-deck-E/wood-deck-E-07-post-repair.jpg',
+            description: 'Detailed repair and reinforcement project for an existing wood deck and its posts.',
+            media: [
+                { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-E/wood-deck-E-01-demolition.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-E/wood-deck-E-02-stair-framing-start.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-E/wood-deck-E-03-stair-framing.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-E/wood-deck-E-04-framing-progress.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-E/wood-deck-E-05-joist-taping.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-E/wood-deck-E-06-stair-stringers.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-E/wood-deck-E-07-post-repair.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-E/wood-deck-E-08-post-repair-detail.jpg' },
+                { type: 'image', url: 'images/Deck-Siding-Windows/wood-deck-E/wood-deck-E-09-stair-tread-detail.jpg' }
+            ]
+        },
+        {
+            id: 12,
+            title: 'Interior Painting',
+            category: 'Painting & Finishing',
+            thumbnailUrl: 'images/Painting-and-Finishing/interior-painting-A/interior-painting-A-04-fireplace-feature-wall.jpg',
+            description: 'Professional interior painting prep and finish work for a flawless, modern look.',
+            media: [
+                { type: 'image', url: 'images/Painting-and-Finishing/interior-painting-A/interior-painting-A-01-prep-high-ceiling.jpg' },
+                { type: 'image', url: 'images/Painting-and-Finishing/interior-painting-A/interior-painting-A-02-prep-bedroom.jpg' },
+                { type: 'image', url: 'images/Painting-and-Finishing/interior-painting-A/interior-painting-A-03-prep-living-room.jpg' },
+                { type: 'image', url: 'images/Painting-and-Finishing/interior-painting-A/interior-painting-A-04-fireplace-feature-wall.jpg' }
+            ]
+        },
+        {
+            id: 13,
+            title: 'Commercial Drywall',
+            category: 'Repairs & Installation',
+            thumbnailUrl: 'images/Repairs-and-Installation/commercial-drywall-B/commercial-drywall-B-07-finished-gym.jpg',
+            description: 'Large-scale commercial drywall installation and finishing for a gymnasium.',
+            media: [
+                { type: 'image', url: 'images/Repairs-and-Installation/commercial-drywall-B/commercial-drywall-B-01-framing.jpg' },
+                { type: 'image', url: 'images/Repairs-and-Installation/commercial-drywall-B/commercial-drywall-B-02-insulation.jpg' },
+                { type: 'image', url: 'images/Repairs-and-Installation/commercial-drywall-B/commercial-drywall-B-03-opened-wall.jpg' },
+                { type: 'image', url: 'images/Repairs-and-Installation/commercial-drywall-B/commercial-drywall-B-04-repair-area.jpg' },
+                { type: 'image', url: 'images/Repairs-and-Installation/commercial-drywall-B/commercial-drywall-B-05-finished-wall.jpg' },
+                { type: 'image', url: 'images/Repairs-and-Installation/commercial-drywall-B/commercial-drywall-B-06-finished-wall-angle.jpg' },
+                { type: 'image', url: 'images/Repairs-and-Installation/commercial-drywall-B/commercial-drywall-B-07-finished-gym.jpg' }
+            ]
+        },
+        {
+            id: 14,
+            title: 'Foundation Repair',
+            category: 'Repairs & Installation',
+            thumbnailUrl: 'images/Repairs-and-Installation/foundation-repair-A/foundation-repair-A-05-crawlspace-after.jpg',
+            description: 'Essential foundation repair, including crawlspace vapor barrier installation and new support structures.',
+            media: [
+                { type: 'image', url: 'images/Repairs-and-Installation/foundation-repair-A/foundation-repair-A-01-crawlspace.jpg' },
+                { type: 'image', url: 'images/Repairs-and-Installation/foundation-repair-A/foundation-repair-A-02-crawlspace-vapor-barrier.jpg' },
+                { type: 'image', url: 'images/Repairs-and-Installation/foundation-repair-A/foundation-repair-A-03-new-supports.jpg' },
+                { type: 'image', url: 'images/Repairs-and-Installation/foundation-repair-A/foundation-repair-A-05-crawlspace-after.jpg' }
             ]
         }
     ];
